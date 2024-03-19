@@ -270,7 +270,7 @@ class InfoDetail extends StatelessWidget {
     double screenHeight = MediaQuery.of(context).size.height;
     return Positioned(
       left: 0,
-      top: 375,
+      top: 370,
       child: Container(
         width: screenWidth,
         height: screenHeight - 100,
