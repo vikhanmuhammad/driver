@@ -35,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             TextSpan(
                               text: 'Selasa, 16 Mei 2024\n',
                               style: TextStyle(
-                                fontSize: 24,
+                                fontSize: 20,
                                 fontWeight: FontWeight.normal,
                                 color: Color.fromARGB(255, 255, 255, 255),
                               ),
@@ -53,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             TextSpan(
                               text: 'Selamat Pagi, \nJoni!',
                               style: TextStyle(
-                                fontSize: 28,
+                                fontSize: 24,
                                 fontWeight: FontWeight.bold,
                                 color: Color.fromARGB(255, 255, 255, 255),
                               ),
@@ -78,13 +78,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
                 Positioned(
-                  top: 150,
+                  top: 120,
                   left: 0,
                   right: 0,
                   child: Column(
                     children: [
                       Container(
-                        height: 400,
+                        height: 350,
                         width: screenWidth - 50,
                         decoration: BoxDecoration(
                           color: const Color.fromARGB(255, 255, 255, 255),
@@ -110,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     TextSpan(
                                       text: 'Perjalanan\n',
                                       style: TextStyle(
-                                        fontSize: 16,
+                                        fontSize: 12,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black,
                                       ),
@@ -128,7 +128,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     TextSpan(
                                       text: 'Kota Awal',
                                       style: TextStyle(
-                                        fontSize: 13,
+                                        fontSize: 12,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.grey,
                                       ),
@@ -146,7 +146,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     TextSpan(
                                       text: 'Bandung\n',
                                       style: TextStyle(
-                                        fontSize: 26,
+                                        fontSize: 20,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black,
                                       ),
@@ -164,7 +164,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     TextSpan(
                                       text: 'Kota Tujuan',
                                       style: TextStyle(
-                                        fontSize: 13,
+                                        fontSize: 12,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.grey,
                                       ),
@@ -180,9 +180,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                 text: const TextSpan(
                                   children: [
                                     TextSpan(
-                                      text: 'Yogyakarta\n',
+                                      text: 'Jakarta\n',
                                       style: TextStyle(
-                                        fontSize: 26,
+                                        fontSize: 20,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.black,
                                       ),
@@ -204,7 +204,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         Text(
                                           'Jam',
                                           style: TextStyle(
-                                            fontSize: 13,
+                                            fontSize: 12,
                                             fontWeight: FontWeight.normal,
                                             color: Colors.black,
                                           ),
@@ -213,7 +213,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         Text(
                                           '10.00 WIB',
                                           style: TextStyle(
-                                            fontSize: 20,
+                                            fontSize: 16,
                                             fontWeight: FontWeight.bold,
                                             color: Colors.black,
                                           ),
@@ -229,7 +229,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         Text(
                                           'Tanggal',
                                           style: TextStyle(
-                                            fontSize: 13,
+                                            fontSize: 12,
                                             fontWeight: FontWeight.normal,
                                             color: Colors.black,
                                           ),
@@ -238,7 +238,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         Text(
                                           '23/12/2024',
                                           style: TextStyle(
-                                            fontSize: 20,
+                                            fontSize: 16,
                                             fontWeight: FontWeight.bold,
                                             color: Colors.black,
                                           ),
@@ -275,7 +275,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ],
                         ),
                       ),
-                      const SizedBox(height: 20),
+                      const SizedBox(height: 18),
                       const Align(
                         alignment: Alignment.centerLeft, // Geser teks ke kiri
                         child: Padding(
@@ -283,14 +283,14 @@ class _MyHomePageState extends State<MyHomePage> {
                           child: Text(
                             'Armada',
                             style: TextStyle(
-                              fontSize: 24,
+                              fontSize: 22,
                               fontWeight: FontWeight.bold,
                               color: Color.fromARGB(255, 0, 0, 0),
                             ),
                           ),
                         ),
                       ),
-                      const SizedBox(height: 20),
+                      const SizedBox(height: 18),
                       Container(
                         height: 100,
                         width: screenWidth - 75, // Atur lebar container tambahan

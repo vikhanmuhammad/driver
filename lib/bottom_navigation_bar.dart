@@ -1,3 +1,4 @@
+import 'package:bismillah_lancar/aktivitas_driver.dart';
 import 'package:flutter/material.dart';
 import 'my_home_page.dart';
 import 'map.dart';
@@ -15,6 +16,7 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
   static List<Widget> _widgetOptions = <Widget>[
     const MyHomePage(title: 'Flutter Demo Application'),
     const MapView(),
+    const AktivitasDriver(),
     // Add your other pages here
   ];
 
@@ -27,7 +29,11 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _widgetOptions.elementAt(_selectedIndex),
+      body: AnimatedSwitcher(
+        duration: Duration(milliseconds: 300),
+        switchInCurve: Curves.easeInOut, // Transisi ease in out
+        child: _widgetOptions.elementAt(_selectedIndex),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -37,6 +43,14 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
           BottomNavigationBarItem(
             icon: Icon(Icons.location_on),
             label: 'Peta',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.map),
+            label: 'Aktivitas',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profil',
           ),
           // Add your other BottomNavigationBarItems here
         ],

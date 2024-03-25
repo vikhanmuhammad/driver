@@ -12,6 +12,21 @@ class MapView extends StatelessWidget {
         scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
       ),
       home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Color(0xFF47A992),
+          title: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Text(
+              "Peta",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 22,
+                fontFamily: 'Poppins',
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ), // Menggunakan properti title untuk menampilkan teks "Aktivitas"
+        ),
         body: ListView(
           children: [
             InfoDetail(),
@@ -45,68 +60,102 @@ class InfoDetail extends StatelessWidget {
                 ),
               ),
               _buildDetailContainer(context),
-              _buildText('Pandawa 87', screenWidth - 300, 420, 16, FontWeight.w600,
+              _buildText('Pandawa 87', screenWidth - 300, 360, 16, FontWeight.w600,
                   Color(0xFF5B5B5B)),
-              _buildText('07 Oktober 2023', screenWidth - 124, 410, 12, FontWeight.w600,
+              _buildText('07 Oktober 2023', screenWidth - 124, 350, 12, FontWeight.w600,
                   Color(0xFF737373)),
               _buildText(
-                  '07.00 AM', screenWidth - 84, 430, 12, FontWeight.w600, Color(0xFF737373)),
-              _buildText('Detail Perjalanan', 25, 500, 14, FontWeight.w600,
+                  '07.00 AM', screenWidth - 84, 370, 12, FontWeight.w600, Color(0xFF737373)),
+              _buildText('Detail Perjalanan', 25, 440, 14, FontWeight.w600,
                   Colors.black.withOpacity(0.5)),
-              _buildDivider(480, context),
-              _buildRotatedContainer(35, 652, 55, 1, 1),
-              _buildDotWithIcon(25, 545, Icons.location_on, Color(0xFF47A992)),
-              _buildVerticalLine(35, 565, 650),
-              _buildDotWithIcon(25, 630, Icons.location_on, Color(0xFF47A992)),
+              _buildDivider(420, context),
+              _buildRotatedContainer(35, 532, 55, 1, 1),
+              _buildDotWithIcon(25, 485, Icons.location_on, Color(0xFF47A992)),
+              _buildVerticalLine(35, 505, 650),
+              _buildDotWithIcon(25, 570, Icons.location_on, Color(0xFF47A992)),
               //_buildImage("assets/img/pandawa.jpg", 10, 410, 55, 43),
-              _buildText('Lokasi Keberangkatan', 55, 540, 12, FontWeight.w600,
+              _buildText('Lokasi Keberangkatan', 55, 480, 12, FontWeight.w600,
                   Colors.black.withOpacity(0.5)),
-              _buildText('Bandung', 55, 560, 12, FontWeight.w500, Colors.black),
-              _buildText('Lokasi Tujuan - 152 km', 55, 625, 12, FontWeight.w600,
+              _buildText('Bandung', 55, 500, 12, FontWeight.w500, Colors.black),
+              _buildText('Lokasi Tujuan - 152 km', 55, 565, 12, FontWeight.w600,
                   Colors.black.withOpacity(0.5)),
-              _buildText('Jakarta', 55, 645, 12, FontWeight.w500, Colors.black),
-              _buildInputContainer(screenWidth - 365, 86, 323, 39, 10, Color(0xFFDBDBDB)),
-              _buildHeaderContainer(0, 0, screenWidth, 70, Color(0xFF47A992)),
-              _buildText('Peta', 25, 25, 22, FontWeight.w600, Colors.white),
-              _buildButton(
-                screenWidth - 345,
-                91,
-                93,
-                29,
-                'Selanjutnya',
-                38,
-                97,
-                11,
-                FontWeight.w600,
-                Colors.grey,
-                0xFFEFEFEF,
+              _buildText('Jakarta', 55, 585, 12, FontWeight.w500, Colors.black),
+              Container(
+              color: Colors.transparent,
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        // Aksi ketika tombol pertama ditekan
+                      },
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8.0),
+                        ),
+                        padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 12.0),
+                        minimumSize: Size(100, 20),
+                        backgroundColor: Color.fromARGB(255, 235, 235, 235),
+                      ),
+                      child: Text(
+                        'Selanjutnya',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 66, 66, 66), 
+                          fontWeight: FontWeight.bold,
+                          fontSize: 12
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 10),
+                    ElevatedButton(
+                      onPressed: () {
+                        // Aksi ketika tombol kedua ditekan
+                      },
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8.0),
+                        ),
+                        padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 12.0),
+                        minimumSize: Size(115, 20),
+                        backgroundColor: Color.fromARGB(255, 235, 235, 235),
+                      ),
+                      child: Text(
+                        'Proses',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 66, 66, 66), 
+                          fontWeight: FontWeight.bold,
+                          fontSize: 12
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 10),
+                    ElevatedButton(
+                      onPressed: () {
+                        // Aksi ketika tombol ketiga ditekan
+                      },
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8.0),
+                        ),
+                        padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 12.0),
+                        minimumSize: Size(115, 20),
+                        backgroundColor: Color.fromARGB(255, 235, 235, 235),
+                      ),
+                      child: Text(
+                        'Selesai',
+                        style: TextStyle(
+                          color: Color.fromARGB(255, 66, 66, 66), 
+                          fontWeight: FontWeight.bold,
+                          fontSize: 12
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              _buildButton(
-                screenWidth - 250,
-                91,
-                93,
-                29,
-                'Proses',
-                161,
-                97,
-                11,
-                FontWeight.w600,
-                Colors.black,
-                0xFFEFEFEF,
-              ),
-              _buildButton(
-                screenWidth - 155,
-                91,
-                93,
-                29,
-                'Selesai',
-                269,
-                97,
-                11,
-                FontWeight.w600,
-                Colors.grey,
-                0xFFEFEFEF,
-              ),
+            ),
             ],
           ),
         ),
@@ -270,10 +319,10 @@ class InfoDetail extends StatelessWidget {
     double screenHeight = MediaQuery.of(context).size.height;
     return Positioned(
       left: 0,
-      top: 370,
+      top: 300,
       child: Container(
         width: screenWidth,
-        height: screenHeight - 100,
+        height: screenHeight - 50,
         decoration: ShapeDecoration(
           color: Colors.white,
           shape: RoundedRectangleBorder(
